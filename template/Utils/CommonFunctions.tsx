@@ -17,6 +17,18 @@ export const errorMessage = (error: any) => {
   );
 };
 
+export const formatError = (error: any) => {
+  return {
+    status: false,
+    data: null,
+    code: error?.response?.status || 0,
+    message:
+      error?.response?.data?.message ||
+      error?.message ||
+      "",
+  };
+};
+
 export const validateEmail = (email: string): boolean => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
