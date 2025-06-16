@@ -55,7 +55,7 @@ template/
 ### Create a New Project Using This Template
 
 ```bash
-npx react-native init MyApp --template react-native-template-jayanta
+npx @react-native-community/cli init MyApp --template @jayanta-sarkar/template
 ```
 
 > Replace `MyApp` with your app name.
